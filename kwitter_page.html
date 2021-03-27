@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Messaging Chat From Prolly</title>
+	<link rel="icon" type="images/x-icon" href="https://img.icons8.com/fluent/48/000000/video-message.png" sizes="16x16">
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style1.css">
+
+</head>
+<body onload="myFunction()" style="margin:0" style="background-image: url('https://wallpapercave.com/wp/eHW6LA1.jpg');">
+
+	<div id="loading">
+		<div id="loader"></div>
+	<h4 id="load">Loading...<br>Please wait a while</h4>
+</div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+	<div class="container">
+		<button onclick="logout()" id="logout" class="btn">Logout</button>
+		<center>
+			<h1 class="header">	
+				Message Chat From Prolly
+				<sup>
+					<img src="https://img.icons8.com/cotton/64/000000/two-hearts--v2.png"><h6 style="color: black;">Developer Of Prolly Is <a style="color: black;" target="_blank" href="info.html">GYANAM GOGOI</a></h6>
+				</sup>
+				<h4 style="color: rgb(79, 255, 62);">Room Name Is : <span id="room_name_display"></span></h4>
+				<h4 style="color: rgb(79, 255, 62);">Username : <span id="username_display"></span></h4>
+				<h4 style="color: rgb(245, 41, 14);">Email : <span id="userpass_display"></span></h4>
+			</h1>
+			<div id="output" style="text-align: left;margin-bottom: 70px;"> </div>
+	
+		</center>
+	</div>
+	
+	<center>
+		<div class="input_div_message_page">
+			<label>Send:</label>
+			<input type="text" id="msg" class="form-control" placeholder="Write your message here..."><img onclick="send()" src="https://img.icons8.com/nolan/64/filled-sent.png"/>
+			<button onclick="send()" class="btn btn-info">Send</button>
+		</div>
+	</center>
+	
+
+</div>
+<script src="kwitter_page.js"></script>
+</body>
+</html>

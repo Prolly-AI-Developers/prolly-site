@@ -1,0 +1,213 @@
+html, body
+{
+  height: 100%;
+  margin: 0;
+  background-color: #08AEEA;
+background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);margin:0;
+}
+#map
+{
+	background-color: #08AEEA;
+background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);margin:0;
+}
+.header
+{
+	color: white;font-family: 'Yeon Sung';font-size: 45px;letter-spacing: 10px;margin-top: 80px;
+}
+.header img
+{
+	width: 80px;margin-left: -15px;
+}
+
+.login_div
+{
+	background: rgba(236, 122, 101, 0.801);float: none;border-radius: 15px;
+}
+
+.logo
+{
+	width: 80px;margin-top: 30px;border-radius: 40px;
+}
+
+#login_button
+{
+	width: 80%;border-radius: 15px;
+}
+#login_button:hover
+{
+	background-color: greenyellow;
+	transform: scale(1.2);
+}
+
+.room_name
+{
+	cursor: pointer;
+	font-size: 20px;
+}
+
+
+#logout
+{
+	font-size: 15px; float: right;height: 60px;
+	background-image: url('https://img.icons8.com/cute-clipart/64/4a90e2/logout-rounded-left.png');
+	color: red;
+}
+
+
+#output
+{
+	padding: 10px; width:80%;background: rgba(255,255,255,0.8);border-radius: 15px;
+}
+
+.input_div_room_page
+{
+	width: 80%;
+}
+
+.input_div label
+{
+	color: white;font-size: 20px;
+}
+
+
+.input_div_message_page
+{
+	position: fixed;bottom: 0px;width: 100%;background: rgba(255,255,255,0.8);
+}
+.input_div_message_page label
+{
+	color: black;
+}
+.input_div_message_page #msg
+{
+	width: 80%;
+}
+.input_div_message_page button
+{
+	margin-top: 15px;
+	width: 50%; 
+}
+.color_white
+{
+	color: white
+}
+
+.user_tick
+{
+	width:20px;
+}
+.user_profile
+{
+	width: 35px;
+}
+.message_h4
+{
+	padding-left:5px;color:grey;
+}
+#myBtn {
+	width: 200px;
+	font-size: 18px;
+	padding: 10px;
+	border: none;
+	background: #000;
+	color: #fff;
+	cursor: pointer;
+  }
+  
+  #myBtn:hover {
+	background: #ddd;
+	color: black;
+  }
+  #localVideo,#remoteVideo
+  {
+	width: 350px;
+	height: 350px;
+	border: 5px dashed rgb(136, 136, 145);
+	background-color: rgb(22, 236, 22);
+	box-shadow: gray 10px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	margin-top: 200px;
+	margin-left: 220px;
+	box-shadow: rgba(156, 172, 172, 0.2) 0px 2px 2px, rgba(156, 172, 172, 0.2) 0px 4px 4px, rgba(156, 172, 172, 0.2) 0px 8px 8px, rgba(156, 172, 172, 0.2) 0px 16px 16px, rgba(156, 172, 172, 0.2) 0px 32px 32px, rgba(156, 172, 172, 0.2) 0px 64px 64px;
+  }
+#name
+{
+	color: blue;
+	margin-left: 250px;
+}
+#remoteVideo_
+{
+	width: 350px;
+	height: 350px;
+	border: 2px dashed black;
+	background-color: rgb(7, 7, 7);
+	box-shadow: gray 10px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	margin-top: 600px;
+	margin-left: -700px;
+	box-shadow: rgba(156, 172, 172, 0.2) 0px 2px 2px, rgba(156, 172, 172, 0.2) 0px 4px 4px, rgba(156, 172, 172, 0.2) 0px 8px 8px, rgba(156, 172, 172, 0.2) 0px 16px 16px, rgba(156, 172, 172, 0.2) 0px 32px 32px, rgba(156, 172, 172, 0.2) 0px 64px 64px;
+}
+
+#load
+{
+	position: absolute;
+	left: 43%;
+	top: 60%;
+
+}
+#loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	margin: -76px 0 0 -76px;
+	border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+	position: relative;
+	-webkit-animation-name: animatebottom;
+	-webkit-animation-duration: 1s;
+	animation-name: animatebottom;
+	animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+	from { bottom:-100px; opacity:0 } 
+	to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+	from{ bottom:-100px; opacity:0 } 
+	to{ bottom:0; opacity:1 }
+  }
+  
+  #myDiv {
+	display: none;
+	text-align: center;
+  }
+  #loading
+  {
+	  text-align: center;
+  }

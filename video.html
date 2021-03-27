@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>How it's From Prolly</title>
+        <link rel="icon" type="images/x-icon" href="https://img.icons8.com/color/48/000000/how-quest.png" sizes="16x16">
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+    body
+    {
+        background-color: aqua;
+        text-align: center;
+    }
+    video
+    {
+        width: 900px;
+        height: 500px;
+        border: 3px dashed yellow;
+    }
+    img
+    {
+        width: 50px;
+        height: auto;
+        border-radius: 30px;
+    }
+</style>
+    </head>
+<body>
+    <img style="text-align: left;" onclick="logOut()" src="https://img.icons8.com/bubbles/50/000000/back.png"/>
+    <h5>Back</h5>
+    <h3>See the below video</h3><hr>
+    <img href="video" src="below.gif">
+    <br>
+    <video controls>
+        <source src="how.webm" type="video/mp4">
+    </video>
+    <hr>
+<script>
+    function logOut()
+    {
+        window.location.replace("video-chat-min.html");
+    }
+</script>
+</body>
+</html>

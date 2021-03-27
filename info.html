@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ProVid Chat Developer</title>
+	<link rel="icon" type="images/x-icon" href="https://img.icons8.com/color/48/000000/devpost.png" sizes="16x16">
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+</head>
+<link rel="stylesheet" href="style.css">
+<script src="login.js"></script>
+<style>
+  #mail
+  {
+    color: #ffffff;
+  }
+  .fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: center;
+  float: left;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+span
+{
+  font-size: 50px;
+}
+</style>
+<body  onload="myFunction()" style="margin:0" id="back_ground">
+
+	<div id="loading">
+			<div id="loader"></div>
+		<h4 id="load">Loading...<br>Please wait a while</h4>
+	</div>
+
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+  
+  <center>
+    <img onclick="logOut()" src="https://img.icons8.com/bubbles/50/000000/back.png"/>
+    <h5>Back</h5>
+    <div class="card">
+      <img src="gyanam.jpg" alt="John" style="width:100%">
+      <h1>Gyanam Gogoi</h1>
+      <p class="title">Founder and CEO, Prolly</p>
+      <i class="fa fa-thumbs-up" onclick="like()"><span id="heart"></span></i>
+      <p>Kendriya Vidyalaya AFS</p>
+      <a href="https://gyanamgogoi.whjr.site/" target="_blank"><i class="fa fa-dribbble"></i></a>
+      <a href="https://twitter.com/GYANAM69216595" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="mailto:teamprolly81@gmail.com?Subject=FeedBack And Regards"><i class="fa fa-envelope"></i></a>
+      <a id="mail" href="mailto:teamprolly81@gmail.com?Subject=FeedBack And Regards"><p><button>Contact</button></a>
+    </div>
+
+    <div class="card">
+      <img src="jos.PNG" alt="John" style="width:100%">
+      <h1>Jos Eljackson</h1>
+      <p class="title">SEO, Prolly</p>
+      <i class="fa fa-thumbs-up" onclick="like_1()"><span id="heart_1"></span></i>
+      <p>Signatre School, Netherlands</p>
+      <a href="https://gyanamgogoi.whjr.site/" target="_blank"><i class="fa fa-dribbble"></i></a>
+      <a href="https://www.instagram.com/jos_eljackson/" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="mailto:teamprolly81@gmail.com?Subject=FeedBack And Regards"><i class="fa fa-envelope"></i></a>
+      <a id="mail" href="mailto:teamprolly81@gmail.com?Subject=FeedBack And Regards"><p><button>Contact</button></a>
+    </div>
+  </center>
+  
+  </div>
+</body>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Messenger</title>
+	<link rel="icon" type="images/x-icon" href="https://img.icons8.com/fluent/48/000000/video-message.png" sizes="16x16">
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style1.css">
+<script src="kwitter.js"></script>
+</head>
+<body onload="myFunction()" style="margin:0;" id="map">
+
+	<div id="loading">
+		<div id="loader"></div>
+	<h4 id="load">Loading...<br>Please wait a while</h4>
+</div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+	<center>
+
+		<h1 class="header">	
+			Messenger From Prolly	<sup>
+		<img src="https://img.icons8.com/pastel-glyph/64/4a90e2/new-message.png">
+		</sup>
+	</h1>
+	
+		<div class="col-lg-4 col-md-6 col-sm-6 col-xs-11 login_div">
+	
+		<img src="https://jynyhy9vu5r8xz5zy0utww-on.drv.tw/www.Kwitter.com/logo.png" class="logo">
+		<h3 >Chat With Your Friend On Privately</h3>
+	
+	
+			<h4 >Join Prolly today</h4>
+			
+			<div class="form-group">
+			  <label >User Name:</label>
+			 <input type="text" id="user_name" class="form-control" placeholder="User Name">
+			 <label >Email:</label>
+			 <input type="email" id="email" class="form-control" placeholder="Enter Your Email">
+			 <label >Password:</label>
+			 <input type="password" id="user_password" class="form-control" placeholder="Enter Password">
+			 <label >Add Or Join Your Room Name:</label>
+			 <input type="text" id="user_room" class="form-control" placeholder="Enter Room Name">
+			 <br>
+			</div>
+	
+			<button id="login_button" class="btn btn-primary" onclick="addUser()">Chat</button>
+			<br>
+			<br>
+			<button id="gallery" class="btn btn-info" onclick="gallery()">See Gallery</button>
+			<br>
+			<br>
+		</div>
+<br>
+
+</center>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prolly Gallery</title>
+    <link rel="icon" type="icon/x-image" href="https://img.icons8.com/color/48/4a90e2/stack-of-photos--v1.png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body
+    {
+        background-color: #08AEEA;
+        background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+    }
+    section
+    {
+      background-color: firebrick;
+    }
+    #myCarousel img {
+    height:300px;
+    width:500px;
+    border-radius: 10px;
+    margin-top: 35px;
+}
+.item
+{
+    background-color: #08AEEA;
+    padding: 10px;
+}
+    .container {    
+  border-radius: 5px;    
+  background-color: #f2f2f2;    
+  padding: 20px;    
+}   
+    #load
+{
+	position: absolute;
+	left: 43%;
+	top: 60%;
+
+}
+#loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	margin: -76px 0 0 -76px;
+	border: 16px solid #9b9696;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 1s linear infinite;
+  }
+  
+#myCarousel {
+    background-color: rgb(110, 241, 165);
+    text-align: center;
+}
+
+.carousel-inner p {
+    margin-bottom: 5px;
+    margin-top: 15px;
+    color: rgb(8, 8, 8);
+    font-size: 15px;
+    
+}
+  
+  @-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+	position: relative;
+	-webkit-animation-name: animatebottom;
+	-webkit-animation-duration: 1s;
+	animation-name: animatebottom;
+	animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+	from { bottom:-100px; opacity:0 } 
+	to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+	from{ bottom:-100px; opacity:0 } 
+	to{ bottom:0; opacity:1 }
+  }
+  
+  #myDiv {
+	display: none;
+	text-align: center;
+  }
+  #loading
+  {
+	  text-align: center;
+  }
+</style>
+
+<body onload="myFunction()" style="margin:0">
+
+<div id="loading">
+    <div id="loader"></div>
+    <h4 id="load">Loading...<br>Please wait a while</h4>
+</div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+    <div style="text-align: center;" class="w3-container w3-green">
+        <a style="background-color: black;color: #fff;margin-right: 950px;" href="login.html">Back To Login</a>
+        <h1>Prolly Gallery</h1>
+        <p>Set with your life!-- <a style="color: #fff;" href="info.html" target="_blank">GYANAM</a> (Founder and CEO of Prolly)</p>
+      </div>
+      
+      <audio autoplay>
+          <source src="Relax.mp3" type="audio/mpeg">
+      </audio>
+      
+      
+      <div class="w3-row-padding">
+        <div class="w3-third">
+          <h2>London</h2>
+          <img onclick="one()" class="img-responsive" src="https://peachyessay.com/wp-content/uploads/2019/12/The-London-City-An-Urban-Sociological-Approach.jpg">
+          <p>London is the capital city of England.</p>
+          <p>It is the most populous city in the United Kingdom,
+          with a metropolitan area of over 13 million inhabitants.</p>
+        </div>
+        
+        <div class="w3-third">
+          <h2>Paris</h2>
+          <img onclick="two()" class="img-responsive" src="https://www.cia-france.com/media/1554/tour-eiffel_720x500.jpg">
+          <p>Paris is the capital of France.</p>
+          <p>The Paris area is one of the largest population centers in Europe,
+          with more than 12 million inhabitants.</p>
+        </div>
+      
+        <div class="w3-third">
+          <h2>Tokyo</h2>
+          <img onclick="three()" class="img-responsive" src="  https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/02/a0002533/img/basic/a0002533_main.jpg?20210122155600&q=80&rw=750&rh=536">
+          <p>Tokyo is the capital of Japan.</p>
+          <p>It is the center of the Greater Tokyo Area,
+          and the most populous metropolitan area in the world.</p>
+        </div>
+      
+        <div class="w3-third">
+          <h2>Amsterdam</h2>
+          <img onclick="four()" class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/b/be/KeizersgrachtReguliersgrachtAmsterdam.jpg">
+          <p>Capital of the Netherlands.</p>
+          <p>Amsterdam is the Netherlands’ capital, known for its artistic heritage, elaborate canal system and narrow houses with gabled facades,
+          legacies of the city’s 17th-century Golden Age.</p>
+        </div>
+      
+        <div class="w3-third">
+          <h2>New Delhi</h2>
+          <img onclick="five()" class="img-responsive" src="https://tr-images.condecdn.net/image/p6dQDpYdlEn/crop/2040/f/gettyimages-962826702.jpg">
+          <p>Capital of the India.</p>
+          <p>New Delhi is the capital of India and an administrative district of NCT Delhi. New Delhi is also the seat of all three branches of the government of
+          India, hosting the Rashtrapati Bhavan, Parliament House, and the Supreme Court of India.</p>
+        </div>
+      
+        <div class="w3-third">
+          <h2>Beijing</h2>
+          <img onclick="six()" class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Beijing_skyline_from_northeast_4th_ring_road.jpg/800px-Beijing_skyline_from_northeast_4th_ring_road.jpg">
+          <p>Capital of the China.</p>
+          <p>Beijing, China’s sprawling capital, has history stretching back 3 millennia. Yet it’s known as much for modern architecture as its ancient sites such as the grand Forbidden City complex,
+           the imperial palace during the Ming and Qing dynasties. Nearby, the massive Tiananmen Square pedestrian plaza is the site of Mao Zedong’s mausoleum and the National Museum of China, displaying a vast collection of cultural relics.</p>
+        </div>
+      </div>
+
+      <div class="w3-row-padding">
+        <div class="w3-third">
+          <h2>Nuuk</h2>
+          <img onclick="seven()" class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/0/00/Nuuk_and_Katuaq_-_Visit_Greenland.jpg">
+          <p>Capital of Greenland.</p>
+          <p>Nuuk, Greenland's capital, is a small city on the country's southwest coast. Its large fjord system is known for waterfalls, humpback whales and icebergs. The waterfront is dotted with brightly colored houses against the backdrop of Sermitsiaq mountain.
+           Greenland National Museum has mummies and Inuit skin boats, while the Nuuk Art Museum displays local works. The Katuaq cultural center offers films, concerts and art.</p>
+        </div>
+      
+        <div class="w3-third">
+          <h2>Reykjavík</h2>
+          <img onclick="eight()" class="img-responsive" src="https://cdn2.wanderlust.co.uk/media/1047/reykjavik-main-image.jpg?anchor=center&mode=crop&width=1200&height=0&rnd=132010164480000000">
+          <p>Capital of Iceland.</p>
+          <p>Reykjavik, on the coast of Iceland, is the country's capital and largest city. It's home to the National and Saga museums, tracing Iceland’s Viking history. The striking concrete Hallgrimskirkja church and rotating Perlan glass dome offer sweeping views of the sea and nearby hills.
+           Exemplifying the island’s volcanic activity is the geothermal Blue Lagoon spa, near the village of Grindavik.</p>
+        </div>
+
+                
+        <div class="w3-third">
+          <h2>Rome</h2>
+          <img onclick="nine()" class="img-responsive" src="https://lp-cms-production.imgix.net/2019-06/GettyImages-543346435_super.jpg?auto=format&fit=crop&ixlib=react-8.6.4&h=520&w=1312">
+          <p>Capital of Italy.</p>
+          <p>Rome is the capital city and a special comune of Italy, as well as the capital of the Lazio region. The city has been a major human settlement for almost three millennia.
+           With 2,860,009 residents in 1,285 km², it is also the country's most populated comune.</p>
+        </div>
+      </div>
+
+      <div class="w3-row-padding">
+        <div class="w3-third">
+          <h2>Zürich</h2>
+          <img onclick="ten()" class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/7/76/Z%C3%BCrich.jpg">
+          <p>City in Switzerland.</p>
+          <p>The city of Zurich, a global center for banking and finance, lies at the north end of Lake Zurich in northern Switzerland. The picturesque lanes of the central Altstadt (Old Town),
+           on either side of the Limmat River, reflect its pre-medieval history.
+           Waterfront promenades like the Limmatquai follow the river toward the 17th-century Rathaus (town hall). </p>
+        </div>
+
+        <div class="w3-third">
+          <h2>Bern</h2>
+          <img onclick="eleven()" class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Central_Bern_from_north.jpg">
+          <p>City in Switzerland.</p>
+          <p>Bern, the capital city of Switzerland, is built around a crook in the Aare River. It traces its origins back to the 12th century, with medieval architecture preserved in the Altstadt (Old Town).
+           The Swiss Parliament and diplomats meet in the Neo-Renaissance Bundeshaus (Federal Palace).
+           The Französische Kirche (French Church) and the nearby medieval tower known as the Zytglogge both date to the 13th century.</p>
+        </div>
+
+        <div class="w3-third">
+          <h2>Oslo</h2>
+          <img onclick="tweleve()" class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Oslo_mot_Grefsentoppen_fra_Ekeberg.jpg">
+          <p>Capital of Norway.</p>
+          <p>Oslo, the capital of Norway, sits on the country’s southern coast at the head of the Oslofjord.
+            It’s known for its green spaces and museums.
+            Many of these are on the Bygdøy Peninsula, including the waterside Norwegian Maritime Museum and the Viking Ship Museum, with Viking ships from the 9th century.
+            The Holmenkollbakken is a ski-jumping hill with panoramic views of the fjord. It also has a ski museum.</p>
+        </div>
+      </div>
+
+      <div class="w3-row-padding">
+        <div class="w3-third">
+          <h2>Stockholm</h2>
+          <img onclick="thirteen()" class="img-responsive" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/f9/5e/stockholm.jpg?w=1100&h=600&s=1">
+          <p>Capital of Sweden.</p>
+          <p>Stockholm, the capital of Sweden, encompasses 14 islands and more than 50 bridges on an extensive Baltic Sea archipelago.
+            The cobblestone streets and ochre-colored buildings of Gamla Stan (the old town) are home to the 13th-century Storkyrkan Cathedral, the Kungliga Slottet Royal Palace and the Nobel Museum, which focuses on the Nobel Prize.
+            Ferries and sightseeing boats shuttle passengers between the islands. </p>
+        </div>
+
+        <div class="w3-third">
+          <h2>Wellington</h2>
+          <img onclick="fourteen()" class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Wellington_NZ-cablecar-topview.jpg/1200px-Wellington_NZ-cablecar-topview.jpg">
+          <p>Capital of New Zealand.</p>
+          <p>Wellington, the capital of New Zealand, sits near the North Island’s southernmost point on the Cook Strait. A compact city, it encompasses a waterfront promenade, sandy beaches, a working harbour and colourful timber houses on surrounding hills. From Lambton Quay, the iconic red Wellington Cable Car heads to the Wellington Botanic Gardens. Strong winds through the Cook Strait give it the nickname "Windy Wellington." </p>
+        </div>
+
+        <div class="w3-third">
+          <h2>Cairo</h2>
+          <img onclick="fifteen()" class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Cairo-Nile-2020%281%29.jpg">
+          <p>Capital of Egypt.</p>
+          <p>Cairo, Egypt’s sprawling capital, is set on the Nile River. At its heart is Tahrir Square and the vast Egyptian Museum, a trove of antiquities including royal mummies and gilded King Tutankhamun artifacts. Nearby, Giza is the site of the iconic pyramids and Great Sphinx, dating to the 26th century BC.
+            In Gezira Island’s leafy Zamalek district, 187m Cairo Tower affords panoramic city views.</p>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <h1>Slide Show</h1>
+
+        <div id="myCarousel" class="carousel slide">
+          <div  class="carousel-inner">
+            <div class="item active">
+              <div class="numbertext">1 / 15</div>
+              <center>
+                <img src="https://peachyessay.com/wp-content/uploads/2019/12/The-London-City-An-Urban-Sociological-Approach.jpg">
+                <div class="carousel-content">
+                  <p>London</p>
+                </div>
+              </center>
+              </div>
+          
+            <div class="item">
+              <div class="numbertext">2 / 15</div>
+              <center>
+                <img src="https://www.cia-france.com/media/1554/tour-eiffel_720x500.jpg">
+                <div class="carousel-content">
+                  <p>Paris</p>
+                </div>
+              </center>
+              </div>
+          
+            <div class="item">
+              <div class="numbertext">3 / 15</div>
+              <center>
+                <img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/02/a0002533/img/basic/a0002533_main.jpg?20210122155600&q=80&rw=750&rh=536">
+                <div class="carousel-content">
+                  <p>Tokyo</p>
+                </div>
+              </center>
+              </div>
+    
+            <div class="item">
+              <div class="numbertext">4 / 15</div>
+              <center>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/KeizersgrachtReguliersgrachtAmsterdam.jpg">
+                <div class="carousel-content">
+                  <p>Amaterdam</p>
+                </div>
+              </center>
+            </div>
+    
+            <div class="item">
+              <div class="numbertext">5 / 15</div>
+              <center>
+                <img src="https://tr-images.condecdn.net/image/p6dQDpYdlEn/crop/2040/f/gettyimages-962826702.jpg">
+                <div class="carousel-content">
+                  <p>New Delhi</p>
+                </div>
+              </center>
+            </div>
+    
+            <div class="item">
+              <div class="numbertext">6 / 15</div>
+              <center>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Beijing_skyline_from_northeast_4th_ring_road.jpg/800px-Beijing_skyline_from_northeast_4th_ring_road.jpg">
+                <div class="carousel-content">
+                  <p>Beijing</p>
+                </div>
+              </center>
+            </div>
+    
+            <div class="item">
+              <div class="numbertext">7 / 15</div>
+              <center>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Nuuk_and_Katuaq_-_Visit_Greenland.jpg">
+                <div class="carousel-content">
+                  <p>Nuuk</p>
+                </div>
+              </center>
+            </div>
+    
+            <div class="item">
+              <div class="numbertext">8 / 15</div>
+              <center>
+                <img src="https://cdn2.wanderlust.co.uk/media/1047/reykjavik-main-image.jpg?anchor=center&mode=crop&width=1200&height=0&rnd=132010164480000000">
+                <div class="carousel-content">
+                  <p>Reykjavík</p>
+                </div>
+              </center>
+            </div>
+    
+            <div class="item">
+              <div class="numbertext">9 / 15</div>
+              <center>
+                <img src="https://lp-cms-production.imgix.net/2019-06/GettyImages-543346435_super.jpg?auto=format&fit=crop&ixlib=react-8.6.4&h=520&w=1312">
+                <div class="carousel-content">
+                  <p>Rome</p>
+                </div>
+              </center>
+            </div>
+    
+            <div class="item">
+              <div class="numbertext">10 / 15</div>
+              <center>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Z%C3%BCrich.jpg">
+                <div class="carousel-content">
+                  <p>Zürich</p>
+                </div>
+              </center>
+            </div>
+    
+            <div class="item">
+              <div class="numbertext">11 / 15</div>
+              <center>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Central_Bern_from_north.jpg">
+                <div class="carousel-content">
+                  <p>Bern</p>
+                </div>
+              </center>
+            </div>
+    
+            <div class="item">
+              <div class="numbertext">12 / 15</div>
+              <center>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Oslo_mot_Grefsentoppen_fra_Ekeberg.jpg">
+                <div class="carousel-content">
+                  <p>Oslo</p>
+                </div>
+              </center>
+            </div>
+    
+            <div class="item">
+              <div class="numbertext">13 / 15</div>
+              <center>
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/f9/5e/stockholm.jpg?w=1100&h=600&s=1">
+                <div class="carousel-content">
+                  <p>Stockholm</p>
+                </div>
+              </center>
+            </div>
+    
+            <div class="item">
+              <div class="numbertext">14 / 15</div>
+              <center>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Wellington_NZ-cablecar-topview.jpg/1200px-Wellington_NZ-cablecar-topview.jpg">
+                <div class="carousel-content">
+                  <p>Wellington</p>
+                </div>
+              </center>
+            </div>
+    
+            <div class="item">
+              <div class="numbertext">15 / 15</div>
+              <center>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Cairo-Nile-2020%281%29.jpg">
+                <div class="carousel-content">
+                  <p>Cairo</p>
+                </div>
+              </center>
+            </div>
+    
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide="0" 
+                  class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                       <li data-target="#myCarousel" data-slide-to="2"></li>
+                       <li data-target="#myCarousel" data-slide-to="3"></li>
+                       <li data-target="#myCarousel" data-slide-to="4"></li>
+                       <li data-target="#myCarousel" data-slide-to="5"></li>
+                       <li data-target="#myCarousel" data-slide-to="6"></li>
+                       <li data-target="#myCarousel" data-slide-to="7"></li>
+                       <li data-target="#myCarousel" data-slide-to="8"></li>
+                       <li data-target="#myCarousel" data-slide-to="9"></li>
+                       <li data-target="#myCarousel" data-slide-to="11"></li>
+                       <li data-target="#myCarousel" data-slide-to="12"></li>
+                       <li data-target="#myCarousel" data-slide-to="13"></li>
+                       <li data-target="#myCarousel" data-slide-to="14"></li>
+                       <li data-target="#myCarousel" data-slide-to="15"></li>
+                      
+              </ol>
+          </div>
+
+                  <!-- Next and previous buttons -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+          </div>
+        </div>
+
+      <section>
+        <h1>Thanks For Visit Us!</h1>
+      </section>
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+</body>
+</html>
